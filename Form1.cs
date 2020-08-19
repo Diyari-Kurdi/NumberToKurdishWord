@@ -31,7 +31,7 @@ namespace WindowsFormsApp1
 
             if ((number / 1000000) > 0)
             {
-                if (number > 1000999) 
+                if (number > 1009999) 
                 {
                     words += NumberToWords(number / 1000000) + " ملیۆن و ";
                     number %= 1000000;
@@ -46,7 +46,7 @@ namespace WindowsFormsApp1
 
             if ((number / 1000) > 0)
             {
-                if (number > 1099)
+                if (number > 1099 && number < 9999999 && number !=1000 && number != 2000 && number != 3000 && number != 4000 && number != 5000 && number != 6000 && number != 7000 && number != 8000 && number != 9000)
                 {
                     words += NumberToWords(number / 1000) + " هەزار و ";
                     number %= 1000;
