@@ -31,14 +31,31 @@ namespace WindowsFormsApp1
 
             if ((number / 1000000) > 0)
             {
-                words += NumberToWords(number / 1000000) + " ملیۆن ";
-                number %= 1000000;
+                if (number > 1000999) 
+                {
+                    words += NumberToWords(number / 1000000) + " ملیۆن و ";
+                    number %= 1000000;
+                }
+                else 
+                {
+                    words += NumberToWords(number / 1000000) + " ملیۆن ";
+                    number %= 1000000;
+                }
+                
             }
 
             if ((number / 1000) > 0)
             {
-                words += NumberToWords(number / 1000) + " هەزار ";
-                number %= 1000;
+                if (number > 1099)
+                {
+                    words += NumberToWords(number / 1000) + " هەزار و ";
+                    number %= 1000;
+                }
+                else
+                {
+                    words += NumberToWords(number / 1000) + " هەزار ";
+                    number %= 1000;
+                }
             }
             if (number != 100)
             {
