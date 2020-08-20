@@ -9,6 +9,67 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+        
+        int[] thousends =
+            {
+            1000,
+            2000,
+            3000,
+            4000,
+            5000,
+            6000,
+            7000,
+            8000,
+            9000,
+            10000,
+             20000,
+             30000,
+             40000,
+             50000,
+             60000,
+             70000,
+             80000,
+             90000,
+             100000,
+             200000,
+             300000,
+             400000,
+             500000,
+             600000,
+             700000,
+             800000,
+             900000
+        };
+        int[] millions =
+            {
+            1000000,
+            2000000,
+            3000000,
+            4000000,
+            5000000,
+            6000000,
+            7000000,
+            8000000,
+            9000000,
+            10000000,
+             20000000,
+             30000000,
+             40000000,
+             50000000,
+             60000000,
+             70000000,
+             80000000,
+             90000000,
+             100000000,
+             200000000,
+             300000000,
+             400000000,
+             500000000,
+             600000000,
+             700000000,
+             800000000,
+             900000000
+        };
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -21,6 +82,28 @@ namespace WindowsFormsApp1
 
         private string NumberToWords(int number)
         {
+        
+        bool containsthousends = false;
+
+            foreach (int n in thousends)
+            {
+                if (n == number) 
+                {
+                    containsthousends = true;
+                    break;
+                }
+            }
+            bool containsMillions = false;
+
+            foreach (int n in millions)
+            {
+                if (n == number)
+                {
+                    containsMillions = true;
+                    break;
+                }
+            }
+        
             if (number == 0)
                 return "سفر";
 
@@ -31,7 +114,7 @@ namespace WindowsFormsApp1
 
             if ((number / 1000000) > 0)
             {
-                if (number > 1009999) 
+                if (number > 1009999 && number< 999999999 && containsMillions!=true) 
                 {
                     words += NumberToWords(number / 1000000) + " ملیۆن و ";
                     number %= 1000000;
@@ -46,7 +129,7 @@ namespace WindowsFormsApp1
 
             if ((number / 1000) > 0)
             {
-                if (number > 1099 && number < 9999999 && number !=1000 && number != 2000 && number != 3000 && number != 4000 && number != 5000 && number != 6000 && number != 7000 && number != 8000 && number != 9000)
+                if (number > 1099 && number < 9999999 && containsthousends != true)
                 {
                     words += NumberToWords(number / 1000) + " هەزار و ";
                     number %= 1000;
