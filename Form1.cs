@@ -1,18 +1,19 @@
 using System;
-using System.Data;
+using System.Windows.Forms;
 
-namespace NumberToKurdishWord
+namespace WindowsFormsApp1
 {
-    public class NumToWord
+
+    public partial class Form1 : Form
     {
 
-        public string GetWords(Int64 number)
+        public Form1()
         {
-            return NumberToWords(number);
-        }
+            InitializeComponent();
 
+        }
         int[] thousends =
-            {
+    {
             1000,
             2000,
             3000,
@@ -71,6 +72,7 @@ namespace NumberToKurdishWord
              800000000,
              900000000
         };
+
         Int64[] billions =
             {
             1000000000,
@@ -101,6 +103,15 @@ namespace NumberToKurdishWord
              800000000000,
              900000000000
         };
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                
+                textBox2.Text = NumberToWords(Convert.ToInt64(textBox1.Text));
+            }
+            catch { }
+        }
 
         private string NumberToWords(Int64 number)
         {
@@ -248,5 +259,7 @@ namespace NumberToKurdishWord
             return words;
 
         }
+
+
     }
 }
