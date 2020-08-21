@@ -192,18 +192,25 @@ namespace WindowsFormsApp1
 
                 if ((number / 1000) > 0)
                 {
-                    if (number > 1099 && number < 9999999 && containsthousends != true)
+                    if (number < 2000) 
                     {
-                        words += NumberToWords(number / 1000) + " هەزار و ";
+                        words += " هەزار و ";
                         number %= 1000;
                     }
                     else
                     {
-                        words += NumberToWords(number / 1000) + " هەزار ";
-                        number %= 1000;
+                        if (number > 1099 && number < 9999999 && containsthousends != true)
+                        {
+                            words += NumberToWords(number / 1000) + " هەزار و ";
+                            number %= 1000;
+                        }
+                        else
+                        {
+                            words += NumberToWords(number / 1000) + " هەزار ";
+                            number %= 1000;
+                        }
+
                     }
-
-
                 }
                 if (number != 100)
                 {
