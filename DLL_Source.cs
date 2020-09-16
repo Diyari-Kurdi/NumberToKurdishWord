@@ -1,3 +1,6 @@
+//Diyari Ismaeil
+//OSCAR
+
 using System;
 
 namespace NumberToKurdishWord
