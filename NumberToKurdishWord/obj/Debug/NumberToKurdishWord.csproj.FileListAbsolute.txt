@@ -1,0 +1,6 @@
+C:\Users\Diyari\source\repos\NumberToKurdishWord\NumberToKurdishWord\bin\Debug\NumberToKurdishWord.dll
+C:\Users\Diyari\source\repos\NumberToKurdishWord\NumberToKurdishWord\bin\Debug\NumberToKurdishWord.pdb
+C:\Users\Diyari\source\repos\NumberToKurdishWord\NumberToKurdishWord\obj\Debug\NumberToKurdishWord.csproj.AssemblyReference.cache
+C:\Users\Diyari\source\repos\NumberToKurdishWord\NumberToKurdishWord\obj\Debug\NumberToKurdishWord.csproj.CoreCompileInputs.cache
+C:\Users\Diyari\source\repos\NumberToKurdishWord\NumberToKurdishWord\obj\Debug\NumberToKurdishWord.dll
+C:\Users\Diyari\source\repos\NumberToKurdishWord\NumberToKurdishWord\obj\Debug\NumberToKurdishWord.pdb

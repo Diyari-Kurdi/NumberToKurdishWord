@@ -1,0 +1,14 @@
+C:\Users\Diyari\source\repos\NumberToKurdishWord\NumberToKurdishWord.Sample\bin\Debug\NumberToKurdishWord.Sample.exe.config
+C:\Users\Diyari\source\repos\NumberToKurdishWord\NumberToKurdishWord.Sample\bin\Debug\NumberToKurdishWord.Sample.exe
+C:\Users\Diyari\source\repos\NumberToKurdishWord\NumberToKurdishWord.Sample\bin\Debug\NumberToKurdishWord.Sample.pdb
+C:\Users\Diyari\source\repos\NumberToKurdishWord\NumberToKurdishWord.Sample\obj\Debug\NumberToKurdishWord.Sample.csproj.AssemblyReference.cache
+C:\Users\Diyari\source\repos\NumberToKurdishWord\NumberToKurdishWord.Sample\obj\Debug\NumberToKurdishWord.Sample.csproj.SuggestedBindingRedirects.cache
+C:\Users\Diyari\source\repos\NumberToKurdishWord\NumberToKurdishWord.Sample\obj\Debug\NumberToKurdishWord.Sample.Form1.resources
+C:\Users\Diyari\source\repos\NumberToKurdishWord\NumberToKurdishWord.Sample\obj\Debug\NumberToKurdishWord.Sample.Properties.Resources.resources
+C:\Users\Diyari\source\repos\NumberToKurdishWord\NumberToKurdishWord.Sample\obj\Debug\NumberToKurdishWord.Sample.csproj.GenerateResource.cache
+C:\Users\Diyari\source\repos\NumberToKurdishWord\NumberToKurdishWord.Sample\obj\Debug\NumberToKurdishWord.Sample.csproj.CoreCompileInputs.cache
+C:\Users\Diyari\source\repos\NumberToKurdishWord\NumberToKurdishWord.Sample\obj\Debug\NumberToKurdishWord.Sample.exe
+C:\Users\Diyari\source\repos\NumberToKurdishWord\NumberToKurdishWord.Sample\obj\Debug\NumberToKurdishWord.Sample.pdb
+C:\Users\Diyari\source\repos\NumberToKurdishWord\NumberToKurdishWord.Sample\bin\Debug\NumberToKurdishWord.dll
+C:\Users\Diyari\source\repos\NumberToKurdishWord\NumberToKurdishWord.Sample\bin\Debug\NumberToKurdishWord.pdb
+C:\Users\Diyari\source\repos\NumberToKurdishWord\NumberToKurdishWord.Sample\obj\Debug\NumberToKurdishWord.Sample.csproj.CopyComplete
