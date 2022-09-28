@@ -1,9 +1,9 @@
 # NumberToKurdishWord
 
-Example:
+<h3>Example:</h3>
 
-NumToWord numToWord = new NumToWord();
+```
+string word = ConvertToWord.GetWords(textBox1.Text, Currency.USD);
+```
 
-numToWord.Currency = "دۆلار";
-
-string word = numToWord.GetWords(Convert.ToDecimal(textbox1.Text));
+![This is a alt text.](https://s5.gifyu.com/images/NumberToKurdishWord.gif "This is a sample image.")
