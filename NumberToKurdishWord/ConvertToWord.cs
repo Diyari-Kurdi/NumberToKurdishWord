@@ -1,4 +1,4 @@
-﻿//Diyari Ismaeil
+//Diyari Ismael
 //https://github.com/Diyari-Kurdi
 
 using System;
@@ -174,7 +174,7 @@ namespace NumberToKurdishWord
                                 {
                                     if ((number / 100) > 0)
                                     {
-                                        words += NumberToWords(number / 100) + " سەد ";
+                                        words += NumberToWords(number / 100).TrimEnd() + " سەد";
                                         number %= 100;
                                     }
                                 }
@@ -193,7 +193,7 @@ namespace NumberToKurdishWord
 
                             if (number > 0)
                             {
-                                if (words != "")
+                                if (words != "" && !words.TrimEnd().EndsWith("*"))
                                     words += " * ";
 
                                 if (number < 20)
@@ -214,11 +214,6 @@ namespace NumberToKurdishWord
                     }
                     else
                     {
-                        if (number < 10)
-                        {
-                            number = Convert.ToInt64($"{number}0");
-                        }
-
                         if (number > 0)
                         {
                             if (words != "")
@@ -240,30 +235,14 @@ namespace NumberToKurdishWord
                 {
                     try
                     {
-                        bool isCatched = false;
-                        int indexOfPoint = 0;
-                        int index = 0;
-                        int DigitsAfterPoint = 0;
-                        char[] chars = num.ToString().ToCharArray();
-                        foreach (char c in chars)
-                        {
+                        decimal parsed = decimal.Parse(num.ToString(), System.Globalization.CultureInfo.InvariantCulture);
 
-                            if (c == '.')
-                            {
-                                indexOfPoint = index;
-                                isCatched = true;
-                            }
-                            if (isCatched)
-                            {
-                                DigitsAfterPoint++;
-                            }
-                            index++;
-                        }
-                        isCatched = false;
-                        string substr = x.Substring(0, indexOfPoint);
-                        if (substr != "0")
+                        long main = (long)Math.Floor(parsed);
+                        long cents = (long)Math.Round((parsed - main) * 100);
+
+                        if (main > 0)
                         {
-                            FirstNumber = NumberToWords(Convert.ToInt64(substr));
+                            FirstNumber = NumberToWords(main);
                         }
                         else
                         {
@@ -271,16 +250,11 @@ namespace NumberToKurdishWord
                             CurrencyStr = "";
                             isZero = true;
                         }
-                        string LastSubStr = x.Substring(indexOfPoint + 1);
-                        if (Convert.ToInt32(x.Substring(indexOfPoint + 1)) != 0)
-                        {
 
-                            LastNumber = NumberToWords(Convert.ToInt64(LastSubStr), true);
-                            string kurdish_W = " و ";
-                            if (isZero)
-                            {
-                                kurdish_W = "";
-                            }
+                        if (cents != 0)
+                        {
+                            LastNumber = NumberToWords(cents, true);
+                            string kurdish_W = isZero ? "" : " و ";
                             words += FirstNumber + " " + CurrencyStr + kurdish_W + LastNumber + " سەنت";
                             isZero = false;
                         }
@@ -288,16 +262,13 @@ namespace NumberToKurdishWord
                         {
                             words += FirstNumber + " " + CurrencyStr;
                         }
-
-
                     }
                     catch (Exception ex)
                     {
                         Console.WriteLine(ex.Message);
                     }
-
-
                 }
+
 
                 return words.TrimEnd('*', ' ').Replace("*", "و");
             }
